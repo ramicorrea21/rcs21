@@ -1,0 +1,321 @@
+/* Estilos Generales */
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+.tituloNumb{
+    text-decoration: none;
+    color: white;
+}
+
+.borde {
+    border: solid 1px black;
+}
+
+.txtFooter {
+    padding-top: 10px;
+}
+
+/* Secciones Grid */
+header {
+    background-color: black;
+    color: whitesmoke;
+    text-align: center;
+    padding: 10px;
+    grid-area: header;
+}
+
+.portada {
+    background-image: linear-gradient(to right, orange, darkviolet);
+    grid-area: portada;
+    color: white;
+}
+
+.promoUno {
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    grid-area: promoUno;
+    color: white;
+}
+
+.promoDos {
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    grid-area: promoDos;
+    color: white;
+}
+
+.footer {
+    background-color: grey;
+    text-align: center;
+    grid-area: footer;
+    
+}
+
+/* Responsive Design Desktop */
+@media (min-width: 1024px) {
+    
+
+    .title {
+        font-size: 4rem;
+    }
+
+    /* Menu */
+    .menuFlex {
+        display: flex;
+        list-style-type: none;
+        font-size: 21px;
+        color: whitesmoke;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    ul li {
+        margin-right: 40px;
+        background-color: red;
+        border-radius: 1.5px;
+    }
+
+    li a:hover {
+        background-color: orange;
+        color: black;
+    }
+
+    ul li a {
+        text-decoration: none;
+        color: whitesmoke;
+    }
+
+    nav {
+        padding-top: 8px;
+        padding-bottom: 5pxpx;
+    }
+
+    .gridArea {
+        display: grid;
+        grid-template-areas:
+            "header header"
+            "portada portada"
+            "promoUno promoDos"
+            "footer footer";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 3fr 3fr 1fr;
+    }
+
+    .gridSecciones{
+        display: grid;
+        grid-template-areas: 
+        "header header header"
+        "seccionUno seccionDos seccionTres"
+        "footer footer footer";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.4fr 2fr 0.4fr;
+    }
+    
+}
+
+/* Responsive Design Tablet */
+
+@media(min-width: 481px) and (max-width: 1023px) {
+    
+    .title {
+        font-size: 3rem;
+    }
+
+    .menuFlex {
+        display: flex;
+        list-style-type: none;
+        font-size: 18px;
+        color: whitesmoke;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    ul li {
+        margin-right: 40px;
+        background-color: red;
+        border-radius: 1.5px;
+    }
+
+    li a:hover {
+        background-color: orange;
+        color: black;
+    }
+
+    ul li a {
+        text-decoration: none;
+        color: whitesmoke;
+    }
+
+    nav {
+        padding-top: 8px;
+        padding-bottom: 5pxpx;
+    }
+
+    .gridArea {
+        display: grid;
+        grid-template-areas:
+            "header"
+            "portada"
+            "promoUno"
+            "promoDos"
+            "footer ";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 3fr 2fr 2fr 1fr;
+    }
+
+    .gridSecciones{
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "seccionUno" 
+        "seccionDos" 
+        "seccionTres"
+        "footer ";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 2fr 2fr 1fr ;
+    }
+
+}
+
+/* Responsive Design Smartphone */
+@media(max-width: 480px) {
+
+
+    .menuFlex {
+        display: flex;
+        list-style-type: none;
+        font-size: 19px;
+        color: whitesmoke;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* Menu */
+    ul li {
+        margin-right: 40px;
+        background-color: red;
+        border-radius: 1.5px;
+        border: 2px solid black;
+    }
+
+    ul li:hover {
+        background-color: orange;
+        color: black;
+    }
+
+    ul li a {
+        text-decoration: none;
+        color: whitesmoke;
+    }
+
+    nav {
+        padding-top: 8px;
+    }
+
+    .gridArea {
+        display: grid;
+        grid-template-areas:
+            "header"
+            "portada"
+            "promoUno"
+            "promoDos"
+            "footer ";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 3fr 2fr 2fr 1fr;
+    }
+
+    .gridSecciones{
+        display: grid;
+        grid-template-areas: 
+        "header"
+        "seccionUno" 
+        "seccionDos" 
+        "seccionTres"
+        "footer ";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 2fr 2fr 1fr ;
+    }
+    
+}
+
+/* Css Secciones */
+/* Nombre secciones grid */
+
+.seccionUno {
+    background-color: #4158D0;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    grid-area: seccionUno;
+    color: white;
+}
+
+.seccionDos {
+    background-color: #4158D0;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    grid-area: seccionDos;
+    color: white;
+}
+
+.seccionTres {
+    background-color: #4158D0;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-color: burlywood;
+    color: white;
+}
+
+/* Nosotros */
+.txtUs{
+    text-align: center;
+    font-size: 28px;
+    padding-top: 10px;
+}
+
+.usAnimado{
+    transition: all 0s;
+}
+
+.usAnimado:hover{
+    color: red;
+}
+
+.footerUs{
+    margin-top: 50vh;
+}
+
+/* Transiciones */
+
+.transicion{
+    transition:  all 0s;
+}
+.transicion:hover{
+    border: solid 3px blue;
+    
+}
+
+/* Animaciones */
+.footerAnimado  {
+    animation-name: footerAnimado;
+    animation-iteration-count: 1;
+    animation-duration: 2s;
+}
+
+@keyframes footerAnimado{
+    from{
+        transform: translate(-50%);
+    }
+    to{
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
